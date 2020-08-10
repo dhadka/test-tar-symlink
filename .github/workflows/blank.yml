@@ -28,7 +28,7 @@ jobs:
         
     - name: Add Mingw to PATH
       run: |
-        echo "::add-path::C:\msys64\mingw64\bin"
+        echo "::add-path::C:\msys64\usr\bin"
       
     - name: Display content
       if: steps.cache.outputs.cache-hit == 'true'
