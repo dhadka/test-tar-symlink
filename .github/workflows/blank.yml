@@ -16,7 +16,7 @@ jobs:
       with:
         path: |
           test
-        key: test-v3
+        key: test-v4
         
     - name: Display content
       if: steps.cache.outputs.cache-hit == 'true'
@@ -27,5 +27,10 @@ jobs:
       if: steps.cache.outputs.cache-hit != 'true'
       shell: cmd
       run: |
-        mkdir -p test/foo/bar
+        mkdir test
+        cd test
+        mkdir foo
+        cd foo
+        mkdir bar
+        cd bar
         mklink /j link ..\..
