@@ -27,6 +27,7 @@ jobs:
         dir C:\msys64\mingw64\bin
         
     - name: Add Mingw to PATH
+      if: ${{ runner.os == 'Windows' }}
       run: |
         echo "::add-path::C:\msys64\usr\bin"
       
