@@ -16,7 +16,7 @@ jobs:
       with:
         path: |
           test
-        key: test-v2
+        key: test-v3
         
     - name: Display content
       if: steps.cache.outputs.cache-hit == 'true'
