@@ -20,7 +20,7 @@ jobs:
         
     - name: Locate Mingw
       run: |
-        dir C:\msys64
+        dir C:\msys64\mingw64
       
     - name: Display content
       if: steps.cache.outputs.cache-hit == 'true'
