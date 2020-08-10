@@ -18,6 +18,10 @@ jobs:
           test
         key: test-v4
         
+    - name: Locate Mingw
+      run: |
+        dir C:\
+      
     - name: Display content
       if: steps.cache.outputs.cache-hit == 'true'
       run: |
