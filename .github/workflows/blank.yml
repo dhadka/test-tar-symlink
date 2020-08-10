@@ -10,27 +10,19 @@ jobs:
     runs-on: windows-latest
 
     steps:
+    - name: Use GNU Tar from Msys
+      if: ${{ runner.os == 'Windows' }}
+      run: |
+        echo "::add-path::C:\msys64\usr\bin"
+          
     - name: Cache
       id: cache
       uses: actions/cache@v2
       with:
         path: |
           test
-        key: test-v7
+        key: test-v8
         
-    - name: Locate Mingw
-      run: |
-        echo %PATH%
-        dir C:\msys64\
-        dir C:\msys64\usr\bin
-        dir C:\msys64\mingw32\bin
-        dir C:\msys64\mingw64\bin
-        
-    - name: Add Mingw to PATH
-      if: ${{ runner.os == 'Windows' }}
-      run: |
-        echo "::add-path::C:\msys64\usr\bin"
-      
     - name: Display content
       if: steps.cache.outputs.cache-hit == 'true'
       run: |
