@@ -16,7 +16,7 @@ jobs:
       with:
         path: |
           test
-        key: test-v1
+        key: test-v2
         
     - name: Create content
       if: steps.cache.outputs.cache-hit != 'true'
