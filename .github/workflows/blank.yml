@@ -11,6 +11,7 @@ jobs:
 
     steps:
     - name: Which tar
+      shell: cmd
       run: |
         where tar
           
