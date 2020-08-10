@@ -13,6 +13,7 @@ jobs:
     - name: Which tar
       shell: cmd
       run: |
+        set
         where tar
         "C:\Program Files\Git\usr\bin\tar.exe" --version
         "C:\Windows\System32\tar.exe" --version
