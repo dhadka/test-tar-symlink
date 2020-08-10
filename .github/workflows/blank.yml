@@ -10,6 +10,11 @@ jobs:
     runs-on: windows-latest
 
     steps:
+    - name: Which tar
+      shell: bash
+      run: |
+        which tar
+          
     - name: Use GNU Tar from Msys
       if: ${{ runner.os == 'Windows' }}
       run: |
