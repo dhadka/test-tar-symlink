@@ -1,0 +1,25 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Cache
+      id: cache
+      uses: actions/cache@v2
+      with:
+        path: |
+          test
+        key: test-v1
+        
+    - name: Create content
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: |
+        mkdir -p test/foo/bar
+        mklink /D link ..\..
