@@ -20,7 +20,9 @@ jobs:
         
     - name: Locate Mingw
       run: |
+        echo %PATH%
         dir C:\msys64\
+        dir C:\msys64\usr\bin
         dir C:\msys64\mingw32\bin
         dir C:\msys64\mingw64\bin
       
