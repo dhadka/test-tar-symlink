@@ -23,4 +23,4 @@ jobs:
       shell: cmd
       run: |
         mkdir -p test/foo/bar
-        mklink /D link ..\..
+        mklink /j link ..\..
