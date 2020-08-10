@@ -14,6 +14,8 @@ jobs:
       shell: cmd
       run: |
         where tar
+        C:\Program Files\Git\usr\bin\tar.exe --version
+        C:\Windows\System32\tar.exe --version
           
     - name: Use GNU Tar from Msys
       if: ${{ runner.os == 'Windows' }}
