@@ -16,7 +16,7 @@ jobs:
       with:
         path: |
           test
-        key: test-v5
+        key: test-v6
         
     - name: Locate Mingw
       run: |
