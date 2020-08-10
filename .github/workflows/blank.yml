@@ -11,9 +11,8 @@ jobs:
 
     steps:
     - name: Which tar
-      shell: bash
       run: |
-        which tar
+        where tar
           
     - name: Use GNU Tar from Msys
       if: ${{ runner.os == 'Windows' }}
