@@ -20,6 +20,8 @@ jobs:
         
     - name: Locate Mingw
       run: |
+        dir C:\msys64\
+        dir C:\msys64\mingw32\bin
         dir C:\msys64\mingw64\bin
       
     - name: Display content
