@@ -18,6 +18,11 @@ jobs:
           test
         key: test-v2
         
+    - name: Display content
+      if: steps.cache.outputs.cache-hit == 'true'
+      run: |
+        du -a
+        
     - name: Create content
       if: steps.cache.outputs.cache-hit != 'true'
       shell: cmd
